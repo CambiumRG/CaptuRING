@@ -1,6 +1,6 @@
 import serial
 import time
-#import piggyphoto
+# import piggyphoto
 import gphoto2 as gp  # Nueva libreria para gestion camara
 import math
 import signal

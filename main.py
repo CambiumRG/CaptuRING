@@ -1,16 +1,16 @@
-from PyQt5 import QtCore as qtc
+# from PyQt5 import QtCore as qtc
 from PyQt5 import QtWidgets as qtw
-from PyQt5 import QtGui as qtg
+# from PyQt5 import QtGui as qtg
 from interfaz.interfaz import Ui_interfaz
 from db.controllerDB import createDataBase, getParams, changeData
 # from stitcher.stitcher import stitcherMain
 from arduino.pruebaSerial import placeSample, takeSamples
-import sqlite3
+# import sqlite3
 import os
-import base64
+# import base64
 import serial
-from tkinter import Tk
-from tkinter.filedialog import askopenfilenames, askdirectory
+# from tkinter import Tk
+# from tkinter.filedialog import askopenfilenames, askdirectory
 
 
 class WindInterfaz(qtw.QWidget):
