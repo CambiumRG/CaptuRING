@@ -50,8 +50,11 @@ class WindInterfaz(qtw.QWidget):
             try:
                 os.mkdir("Outputs/" + coreName)
             except OSError as error:
-                qtw.QMessageBox.critical(
+                if exc.errno != errno.EEXIST:
+                    qtw.QMessageBox.critical(
                     self, "Fail", "This name is duplicated. Are you sure to continue?")
+                pass
+
 
     def createSample(self):
         conn = serial.Serial('/dev/ttyUSB0', 250000, timeout=1, exclusive=True)
