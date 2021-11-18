@@ -50,7 +50,7 @@ class WindInterfaz(qtw.QWidget):
         else:
             try:
                 os.mkdir("Outputs/" + coreName)
-            except OSError as error:
+            except OSError as exc:
                 if exc.errno != errno.EEXIST:
                     qtw.QMessageBox.critical(
                     self, "Fail", "This name is duplicated. Are you sure to continue?")
