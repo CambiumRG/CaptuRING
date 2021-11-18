@@ -9,6 +9,7 @@ from arduino.pruebaSerial import placeSample, takeSamples
 import os
 # import base64
 import serial
+import errno
 # from tkinter import Tk
 # from tkinter.filedialog import askopenfilenames, askdirectory
 
