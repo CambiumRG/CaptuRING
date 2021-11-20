@@ -9,7 +9,7 @@ from arduino.pruebaSerial import placeSample, takeSamples
 import os
 # import base64
 import serial
-import errno
+import errno # TODO Confirm adequate use
 # from tkinter import Tk
 # from tkinter.filedialog import askopenfilenames, askdirectory
 
@@ -106,7 +106,7 @@ class WindInterfaz(qtw.QWidget):
 
 
 def createDB():
-    if not os.path.isfile('.tornilloTron.db'):
+    if not os.path.isfile('.CaptuRING.db'):
         createDataBase()
 
 
