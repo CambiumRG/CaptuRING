@@ -9,7 +9,7 @@ def convertToBinaryData(filename):
 
 
 def changeData(name, data):
-    conn = sqlite3.connect('.tornilloTron.db')
+    conn = sqlite3.connect('.CaptuRING.db')
     c = conn.cursor()
     print("Connected to SQLite")
     sqlite_insert_query = """UPDATE SETUP SET """ + \
@@ -22,7 +22,7 @@ def changeData(name, data):
 
 
 def getParams():
-    conn = sqlite3.connect('.tornilloTron.db')
+    conn = sqlite3.connect('.CaptuRING.db')
     c = conn.cursor()
     print("Connected to SQLite")
     sqlite_insert_query = """SELECT * FROM SETUP WHERE setup_name = 'setup';"""
@@ -36,7 +36,7 @@ def getParams():
 
 
 def createDataBase():
-    conn = sqlite3.connect('.tornilloTron.db')
+    conn = sqlite3.connect('.CaptuRING.db')
     c = conn.cursor()
 
     # Create table - SETUP
