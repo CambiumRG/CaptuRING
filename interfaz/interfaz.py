@@ -70,7 +70,7 @@ class Ui_interfaz(object):
         self.tamanioMuestra.setObjectName("tamanioMuestra")
         self.tamanioMuestra.setValue(data[4])
 
-        # Crear Muestra
+        # Sample Creation
 
         self.crearMuestra = QtWidgets.QPushButton(self.frame)
         self.crearMuestra.setGeometry(QtCore.QRect(60, 190, 180, 60))

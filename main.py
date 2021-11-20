@@ -13,7 +13,7 @@ import errno # TODO Confirm adequate use
 # from tkinter import Tk
 # from tkinter.filedialog import askopenfilenames, askdirectory
 
-
+#TODO Interface options from lab computer
 class WindInterfaz(qtw.QWidget):
 
     def __init__(self, *args, **kwargs):
