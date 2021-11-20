@@ -1,6 +1,6 @@
 import serial
 import time
-# import piggyphoto TODO
+# import piggyphoto TODO check imports
 import gphoto2 as gp
 import math
 import signal
