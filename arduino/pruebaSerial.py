@@ -80,7 +80,7 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
         writeUntilTextArduino(conn, textoMovimiento, "ok")
         time.sleep(tiempoSleepPaso)
         # Image capturing and download
-        subprocess.run(["gphoto2", "--capture-image-and-download", "--filename",
+        subprocess.run(["gphoto2", "--capture-image-and-download", "--force-overwrite", "--filename",
                        path], stdout=subprocess.PIPE, universal_newlines=True)
         print("Foto realizada en x = " + str(i) +
               " con nombre " + str(nombreImagen))
