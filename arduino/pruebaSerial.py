@@ -1,10 +1,5 @@
-import serial
 import time
-# import piggyphoto TODO check imports
-import gphoto2 as gp
 import math
-import signal
-import os
 import subprocess
 
 # Screen
@@ -58,7 +53,7 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
     xmin = (spindle-sampleSize)/2 + platform + offset  # mm
     xmax = (spindle+sampleSize)/2 + platform + offset  # mm
     # Para cerrar el puerto de la camara si se ha automontado
-    subprocess.call(["gio", "mount", "-s", "gphoto2"])
+    subprocess.call(["gio", "mount", "-s", "gphoto2"]) # Requires library installation
     time.sleep(1)
     # Round xMin/xMax
     xMin = math.floor(xmin)
@@ -71,9 +66,6 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
 
     for i in range(xMin, xMax, sizeStep):
         textoMovimiento = "G0 X" + str(i) + " F" + str(speedStep) + "\r"
-        #now = datetime.datetime.now()
-
-        # TODO  + str(shoot).zfill(3)
         nombreImagen = nameCore + "_" + str(i) + "mm_" + ".jpg"
         path = "Outputs/" + nameCore + "/" + nombreImagen  # Nuevo "Outputs/"
         tiempoSleepPaso = 60 * float(sizeStep) / float(speedStep)
@@ -84,11 +76,6 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
                        path], stdout=subprocess.PIPE, universal_newlines=True)
         print("Foto realizada en x = " + str(i) +
               " con nombre " + str(nombreImagen))
-
-        # TODO show progress
-        global progress
-        progress = i/shoots
-
     print("Shooting Process Finished")
 
     subprocess.call(["gio", "mount", "-s", "gphoto2"])
