@@ -1,19 +1,14 @@
-# from PyQt5 import QtCore as qtc
+# Required libraries for the complete tool:
+## os, serial, errno, gphoto2 (run as subprocess), time, math, subprocess, PyQt5, sqlite3
+
 from PyQt5 import QtWidgets as qtw
-# from PyQt5 import QtGui as qtg
 from interfaz.interfaz import Ui_interfaz
 from db.controllerDB import createDataBase, getParams, changeData
-# from stitcher.stitcher import stitcherMain
 from arduino.pruebaSerial import placeSample, takeSamples
-# import sqlite3
 import os
-# import base64
 import serial
-import errno # TODO Confirm adequate use
-# from tkinter import Tk
-# from tkinter.filedialog import askopenfilenames, askdirectory
+import errno #
 
-#TODO Interface options from lab computer
 class WindInterfaz(qtw.QWidget):
 
     def __init__(self, *args, **kwargs):
