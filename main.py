@@ -43,18 +43,24 @@ class WindInterfaz(qtw.QWidget):
     def coreNamef(self):
         global coreName
         coreName = self.ui.nameCore.text()
+        global corePath
+        corePath = "Outputs/" + coreName
 
         if coreName.strip() == "" or coreName.strip() == "None":
             qtw.QMessageBox.critical(
                 self, "Fail", "No valid name for the core.")
         else:
-            try:
-                os.mkdir("Outputs/" + coreName)
-            except OSError as exc:
-                if exc.errno != errno.EEXIST:
-                    qtw.QMessageBox.critical(
-                    self, "Fail", "This name is duplicated. Are you sure to continue?")
-                pass
+                if not os.path.isdir(dirPath):
+                    qtw.QMessageBox.information(
+                    self, "New directory", 'The Sample Name folder does not exist. New one created.')
+                    try:
+                        os.mkdir(dirPath)
+                    except OSError as exc:
+                        if exc.errno != errno.EEXIST:
+                            pass
+                else:
+                    qtw.QMessageBox.warning(
+                    self, "Duplicated Name",'New images will overwrite the existing ones.\n Are you sure to continue?')
 
 
     def createSample(self):
