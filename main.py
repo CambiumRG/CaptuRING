@@ -9,8 +9,6 @@ import os
 import serial
 import errno # TODO Confirm adequate use
 
-
-#TODO Interface options from lab computer
 class WindInterfaz(qtw.QWidget):
 
     def __init__(self, *args, **kwargs):
