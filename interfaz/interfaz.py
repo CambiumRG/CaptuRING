@@ -12,15 +12,15 @@ class Ui_interfaz(object):
         interfaz.setWindowIcon(QtGui.QIcon('icon.png'))
 
         self.imageL = QtWidgets.QLabel(interfaz)
-        self.imageL.setGeometry(QtCore.QRect(50, 380, 200, 80))
+        self.imageL.setGeometry(QtCore.QRect(10, 400, 200, 80))
         # loading image
         self.pixmap = QPixmap('CambiumLarge.jpg')
-        self.scaledImg = self.pixmap.scaledToWidth(200)
+        self.scaledImg = self.pixmap.scaledToWidth(100)
         self.imageL.setPixmap(self.scaledImg)
 
         self.addressL = QtWidgets.QLabel(interfaz)
-        self.addressL.setGeometry(QtCore.QRect(80, 460, 300, 40))
-        self.urlLink = "<a href=\"http://www.cambiumresearch.eu\">'Cambium RG'</a>"
+        self.addressL.setGeometry(QtCore.QRect(12, 450, 300, 40))
+        self.urlLink = "<a href=\"http://www.cambiumresearch.eu\">Cambium RG</a>"
         self.addressL.setOpenExternalLinks(True)
         self.addressL.setObjectName("addressL")
 
@@ -37,9 +37,9 @@ class Ui_interfaz(object):
         self.optionsL.setObjectName("optionsL")
         self.optionsL.setFont(self.myFont)
 
-        #       Frame creado por MGH
+        # Frame Shooting
         self.frame = QtWidgets.QFrame(interfaz)
-        self.frame.setGeometry(QtCore.QRect(10, 50, 300, 300))
+        self.frame.setGeometry(QtCore.QRect(10, 50, 300, 320))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
 
@@ -70,14 +70,14 @@ class Ui_interfaz(object):
         self.tamanioMuestra.setObjectName("tamanioMuestra")
         self.tamanioMuestra.setValue(data[4])
 
-        # Sample Creation
+        # Crear Muestra
 
         self.crearMuestra = QtWidgets.QPushButton(self.frame)
-        self.crearMuestra.setGeometry(QtCore.QRect(60, 190, 180, 60))
+        self.crearMuestra.setGeometry(QtCore.QRect(60, 210, 180, 60))
         self.crearMuestra.setStyleSheet
         self.crearMuestra.setObjectName("crearMuestra")
 
-        # FRAME02
+        # FRAME02 Options
 
         self.frame_2 = QtWidgets.QFrame(interfaz)
         self.frame_2.setGeometry(QtCore.QRect(320, 50, 140, 430))
@@ -160,7 +160,7 @@ class Ui_interfaz(object):
 
     def retranslateUi(self, interfaz):
         _translate = QtCore.QCoreApplication.translate
-        interfaz.setWindowTitle(_translate("CaptuRing", "CaptuRing"))
+        interfaz.setWindowTitle(_translate("CaptuRing", "CaptuRING"))
         self.imageL.show()
 
         self.addressL.setText(_translate("CaptuRing", self.urlLink))
