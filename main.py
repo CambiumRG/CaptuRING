@@ -1,5 +1,5 @@
 # Required libraries for the complete tool:
-## os, serial, errno, gphoto2 (run as subprocess), time, math, subprocess, PyQt5, sqlite3
+## os, serial (pyserial), errno, gphoto2 (run as subprocess), time, math, subprocess, PyQt5, sqlite3
 
 from PyQt5 import QtWidgets as qtw
 from interfaz.interfaz import Ui_interfaz
@@ -45,11 +45,11 @@ class WindInterfaz(qtw.QWidget):
             qtw.QMessageBox.critical(
                 self, "Fail", "No valid name for the core.")
         else:
-                if not os.path.isdir(dirPath):
+                if not os.path.isdir(corePath):
                     qtw.QMessageBox.information(
                     self, "New directory", 'The Sample Name folder does not exist. New one created.')
                     try:
-                        os.mkdir(dirPath)
+                        os.mkdir(corePath)
                     except OSError as exc:
                         if exc.errno != errno.EEXIST:
                             pass
