@@ -60,9 +60,6 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
     xMax = math.ceil(xmax)
     sizeStep = math.ceil(sizeStep)
 
-    # TODO number of shoots
-    global shoots
-    shoots = (xMax - xMin) / sizeStep
 
     for i in range(xMin, xMax, sizeStep):
         textoMovimiento = "G0 X" + str(i) + " F" + str(speedStep) + "\r"
