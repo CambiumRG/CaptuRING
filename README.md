@@ -1,9 +1,10 @@
 # CaptuRING&reg;
 
 This is a Digitization Project made by Cambium Research Group. 2021.
-Current code is for the first release of the CaptuRING® software. CaptuRING® controls every step for the digitization process described in "CaptuRING: A Do-It-Yourself tool for woodsample digitization". 
+Current code is for the first release of the CaptuRING® software. CaptuRING® controls every step for the digitization process described in "CaptuRING: A Do-It-Yourself tool for woodsample digitization" (García-Hidalgo, 2022). 
 
 *Citation*
+
 García-Hidalgo, M., García-Pedrero, Á., Colón, D., Sangüesa-Barreda, G., García-Cervigón, A. I., López-Molina, J., Hernández-Alonso, H., Rozas, V., Olano, J. M. & Alonso-Gómez, V. (2022). CaptuRING: A do-it-yourself tool for wood sample digitization. Methods in Ecology and Evolution, 00, 1– 7. https://doi.org/10.1111/2041-210X.13847
 
 
