@@ -93,7 +93,7 @@ The digital camera and 3D Printinng Controller Card must be connected to Raspber
    1. Option: Activate a specific [Python environment](https://docs.python.org/3/library/venv.html)
 2. Go to CaptuRING folder
 3. Write and execute: python main.py
-4. See [My First Shoot](#my first shoot) instructions
+4. See [My First Shoot](#my-first-shoot) instructions
 
 <p align="center">
   <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/window.png" title="Interface">
