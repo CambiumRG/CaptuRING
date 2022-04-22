@@ -2,7 +2,6 @@
 
 This is a Digitization Project made by [Cambium Research Group](https://cambiumresearch.eu), 2021.
 
-The extended manual is presented in the [attached document](https://github.com/CambiumRG/CaptuRING/blob/main/manual/CRUserManual_v1.0.0.pdf)
 ## About
 CaptuRING [[1](#references)] is a Do-It-Yourself tool for wood sample digitization. Although the main objective of the tool is taking high resolution images from wood samples, the system could operate with other kind of samples. 
 
@@ -14,7 +13,7 @@ The standard use of CaptuRING with Raspberry Pi/Raspbian based on Debian Buster 
 
 # First Sight
 
-See the detailed user manual [here](https://github.com/CambiumRG/CaptuRING/blob/main/manual/CRUserManual_v1.0.0.pdf)
+See the detailed user manual [here](https://github.com/CambiumRG/CaptuRING/blob/main/manual/CRUserManual_v1.0.0.pdf) in pdf.
 
 ## Component Check-List
 
