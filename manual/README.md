@@ -13,7 +13,7 @@ The standard use of CaptuRING with Raspberry Pi/Raspbian based on Debian Buster 
 
 First Sight
 
-See the detailed user manual in manual>UserManual.pdf
+See the detailed user manual [here](https://github.com/CambiumRG/CaptuRING/blob/main/manual/CRUserManual_v1.0.0.pdf)
 
 ## Component Check-List
 
