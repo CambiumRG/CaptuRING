@@ -55,20 +55,20 @@ Yoy can follow the next steps or watch the ['how to assamble'](https://www.youtu
 #### Assembling map  
 Detailed version [here](CRAssembling.pdf)
 <p align="center">
-  <img src="D:\OneDrive - Universidad de Valladolid\Doctorado\github_copy\CaptuRING\manual\images\assembling.png" title="Assembling architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/assembling.png" title="Assembling architecture">
 </p>
 
 #### Connection map
 Detailed version [here](CRConnection.pdf)
 
 <p align="center">
-  <img src="D:\OneDrive - Universidad de Valladolid\Doctorado\github_copy\CaptuRING\manual\images\cring_sch.jpg" title="Conection architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/cring_sch.jpg" title="Conection architecture">
 </p>
 
 _Arduino Board_
 
 <p align="center">
-  <img src="D:\OneDrive - Universidad de Valladolid\Doctorado\github_copy\CaptuRING\manual\images\MKS1.png" title="Conection architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/MKS1.png" title="Conection architecture">
 </p>
 
 _Digital Camera_
@@ -96,7 +96,7 @@ The digital camera and 3D Printinng Controller Card must be connected to Raspber
 4. See [My First Shoot](#my first shoot) instructions
 
 <p align="center">
-  <img src="D:\OneDrive - Universidad de Valladolid\Doctorado\github_copy\CaptuRING\manual\images\window.png" title="Interface">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/window.png" title="Interface">
 </p>
 
 ## Possible Issues
