@@ -55,20 +55,20 @@ Yoy can follow the next steps or watch the ['how to assamble'](https://www.youtu
 #### Assembling map  
 Detailed version [here](CRAssembling.pdf)
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/assembling.png" title="Assembling architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/assembling.png" title="Assembling architecture" width="300">  
 </p>
 
 #### Connection map
 Detailed version [here](CRConnection.pdf)
 
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/cring_sch.jpg" title="Conection architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/cring_sch.jpg" title="CR Conection architecture" width="300">
 </p>
 
 _Arduino Board_
 
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/MKS1.png" title="Conection architecture">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/MKS1.png" title="MKS Conection architecture" width="300">
 </p>
 
 _Digital Camera_
