@@ -54,20 +54,20 @@ Once you have confirmed that all the listed components are compatible you can as
 #### Assembling map  
 Detailed version [here](CRAssembling.pdf)
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/assembling.png" title="Assembling architecture" width="300">  
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/assembling.png" title="Assembling architecture" width="400">  
 </p>
 
 #### Connection map
 Detailed version [here](CRConnection.pdf)
 
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/cring_sch.jpg" title="CR Conection architecture" width="300">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/cring_sch.jpg" title="CR Conection architecture" width="600">
 </p>
 
 _Arduino Board_
 
 <p align="center">
-  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/MKS1.png" title="MKS Conection architecture" width="300">
+  <img src="https://github.com/CambiumRG/CaptuRING/blob/main/manual/images/MKS1.png" title="MKS Conection architecture" width="600">
 </p>
 
 _Digital Camera_
