@@ -86,6 +86,10 @@ The digital camera and 3D Printinng Controller Card must be connected to Raspber
 
 4. Download [CaptuRING code](https://github.com/cambiumrg/capturing) and store it in an specific folder.  
 
+Current code is the first release of the CaptuRING® software to control the digitization process described in "CaptuRING: A Do-It-Yourself tool for woodsample digitization" (García-Hidalgo, 2022). 
+
+*Original code is registered with number 00 / 2022 / 737 according to the Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996, de 12 de abril) by Ministry of Culture and Sport of Spain. At the same time, this work is released as Free Open Source to be used and modified according to the user requirements and different hardware characteristics but referencing the original work (See Citation).*
+
 ## Launch CaptuRING
 
 1. Open a new Terminal window
@@ -125,10 +129,6 @@ Once CaptuRING software is launched:
 4. Enter sample size in mm
 5. Click on 'CAPTURE'
 6. Digitized images are stored in the Output/’Sample Name’ folder
-
-Current code is the first release of the CaptuRING® software to control the digitization process described in "CaptuRING: A Do-It-Yourself tool for woodsample digitization" (García-Hidalgo, 2022). 
-
-*Original code is registered with number 00 / 2022 / 737 according to the Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996, de 12 de abril) by Ministry of Culture and Sport of Spain. At the same time, this work is released as Free Open Source to be used and modified according to the user requirements and different hardware characteristics but referencing the original work (See Citation).*
 
 
 ## References
