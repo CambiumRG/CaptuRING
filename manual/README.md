@@ -51,7 +51,6 @@ For an efficient shopping, you can purchase the listed components in a store spe
 ## Assembling
 Once you have confirmed that all the listed components are compatible you can assemble the whole tool according to the following architecture.
 
-Yoy can follow the next steps or watch the ['how to assamble'](https://www.youtube.com) video.
 #### Assembling map  
 Detailed version [here](CRAssembling.pdf)
 <p align="center">
