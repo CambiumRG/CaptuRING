@@ -70,11 +70,15 @@ class Ui_interfaz(object):
         self.tamanioMuestra.setObjectName("tamanioMuestra")
         self.tamanioMuestra.setValue(data[4])
 
-        # Crear Muestra
+        # Create Sample button
 
         self.crearMuestra = QtWidgets.QPushButton(self.frame)
         self.crearMuestra.setGeometry(QtCore.QRect(60, 210, 180, 60))
-        self.crearMuestra.setStyleSheet
+        # Disabled until the user provides and confirms a sample name
+        self.crearMuestra.setEnabled(False)
+        self.crearMuestra.setToolTip("Provide a sample name and press 'Name It!' to enable capture")
+        # NOTE: setStyleSheet is not called here intentionally
+        # self.crearMuestra.setStyleSheet
         self.crearMuestra.setObjectName("crearMuestra")
 
         # FRAME02 Options
