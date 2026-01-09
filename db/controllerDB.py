@@ -48,16 +48,18 @@ def createDataBase():
                 SAMPLE_SIZE INTEGER,
                 SIZE_STEP INTEGER,
                 SPINDLE_SIZE INTEGER,
-                PLATFORM INTEGER
+                PLATFORM INTEGER,
+                SAMPLE_SIZE_Y INTEGER,
+                SIZE_STEP_Y INTEGER
                 )''')
     print("DB Created")
 
     c = conn.cursor()
     print("Connected to SQLite")
     sqlite_insert_blob_query = """INSERT INTO SETUP
-                            (SETUP_NAME, OFFSET, SPEED_STEP, INITIAL_SPEED, SAMPLE_SIZE, SIZE_STEP, SPINDLE_SIZE, PLATFORM) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"""
+                            (SETUP_NAME, OFFSET, SPEED_STEP, INITIAL_SPEED, SAMPLE_SIZE, SIZE_STEP, SPINDLE_SIZE, PLATFORM, SAMPLE_SIZE_Y, SIZE_STEP_Y) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
     # Convert data into tuple format
-    c.execute(sqlite_insert_blob_query, ("setup", 0, 0, 0, 0, 0, 0, 0))
+    c.execute(sqlite_insert_blob_query, ("setup", 0, 0, 0, 0, 0, 0, 0, 0, 0))
     print("Data inserted")
     c.close()
 

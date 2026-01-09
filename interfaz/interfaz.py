@@ -7,7 +7,7 @@ from PyQt5.QtGui import QPixmap
 class Ui_interfaz(object):
     def setupUi(self, interfaz, data):
         interfaz.setObjectName("CaptuRinG")
-        interfaz.resize(480, 500)
+        interfaz.resize(480, 620)
 
         interfaz.setWindowIcon(QtGui.QIcon('icon.png'))
 
@@ -158,6 +158,33 @@ class Ui_interfaz(object):
         self.platform.setObjectName("platform")
         self.platform.setValue(data[7])
 
+        # Sample Size Y (2D scanning)
+        self.sampleSizeYLabel = QtWidgets.QLabel(self.frame_2)
+        self.sampleSizeYLabel.setGeometry(QtCore.QRect(10, 5, 120, 30))
+        self.sampleSizeYLabel.setObjectName("sampleSizeYLabel")
+
+        # Extend frame_2 to accommodate new controls
+        self.frame_2.setGeometry(QtCore.QRect(320, 50, 140, 520))
+
+        # Reorganize Y-axis controls in a scrollable area or extend downward
+        self.sampleSizeYLabel.setGeometry(QtCore.QRect(10, 425, 120, 30))
+        self.tamanioMuestraY = QtWidgets.QSpinBox(self.frame_2)
+        self.tamanioMuestraY.setGeometry(QtCore.QRect(10, 460, 120, 30))
+        self.tamanioMuestraY.setMaximum(99999)
+        self.tamanioMuestraY.setObjectName("tamanioMuestraY")
+        self.tamanioMuestraY.setValue(data[8])
+
+        # Step Size Y
+        self.sizeStepYLabel = QtWidgets.QLabel(self.frame_2)
+        self.sizeStepYLabel.setGeometry(QtCore.QRect(10, 495, 120, 30))
+        self.sizeStepYLabel.setObjectName("sizeStepYLabel")
+
+        self.sizeStepY = QtWidgets.QSpinBox(self.frame_2)
+        self.sizeStepY.setGeometry(QtCore.QRect(10, 530, 120, 30))
+        self.sizeStepY.setObjectName("sizeStepY")
+        self.sizeStepY.setMaximum(99999)
+        self.sizeStepY.setValue(data[9])
+
         self.retranslateUi(interfaz)
 
         QtCore.QMetaObject.connectSlotsByName(interfaz)
@@ -185,3 +212,5 @@ class Ui_interfaz(object):
         self.platformLabel.setText(_translate("CaptuRing", "Platform"))
         self.spstepLabel.setText(_translate("CaptuRing", "Speed/step"))
         self.inSpeedLabel.setText(_translate("CaptuRing", "Initial speed"))
+        self.sampleSizeYLabel.setText(_translate("CaptuRing", "Sample size Y (mm)"))
+        self.sizeStepYLabel.setText(_translate("CaptuRing", "Step size Y"))

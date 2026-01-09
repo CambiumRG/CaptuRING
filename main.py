@@ -15,7 +15,7 @@ Notes / Requirements:
 from PyQt5 import QtWidgets as qtw
 from interfaz.interfaz import Ui_interfaz
 from db.controllerDB import createDataBase, getParams, changeData
-from arduino.pruebaSerial import placeSample, takeSamples
+from arduino.pruebaSerial import placeSample, takeSamples, takeSamples2D
 import os
 import serial
 import errno
@@ -50,6 +50,10 @@ class WindInterfaz(qtw.QWidget):
             lambda: changeData("SPINDLE_SIZE", self.ui.tamanioHusillo.value()))
         self.ui.platform.valueChanged.connect(
             lambda: changeData("PLATFORM", self.ui.platform.value()))
+        self.ui.tamanioMuestraY.valueChanged.connect(
+            lambda: changeData("SAMPLE_SIZE_Y", self.ui.tamanioMuestraY.value()))
+        self.ui.sizeStepY.valueChanged.connect(
+            lambda: changeData("SIZE_STEP_Y", self.ui.sizeStepY.value()))
         self.ui.newcoreName.clicked.connect(self.coreNamef)
         self.ui.crearMuestra.clicked.connect(lambda: self.createSample())
 
@@ -136,21 +140,36 @@ class WindInterfaz(qtw.QWidget):
                             self.ui.initSpeed.value(),
                             self.ui.tamanioMuestra.value(),
                             self.ui.tamanioHusillo.value(),
-                            self.ui.platform.value())
+                            self.ui.platform.value(),
+                            self.ui.tamanioMuestraY.value())
 
                 reply = qtw.QMessageBox.information(
                     self, "Check placement", "Is the sample correctly placed?", qtw.QMessageBox.Yes, qtw.QMessageBox.No)
 
                 if reply == qtw.QMessageBox.Yes:
-                    takeSamples(conn,
-                                self.ui.offset.value(),
-                                self.ui.stepSpeed.value(),
-                                self.ui.tamanioMuestra.value(),
-                                self.ui.sizeStep.value(),
-                                self.ui.tamanioHusillo.value(),
-                                self.ui.platform.value(),
-                                ##
-                                coreName)
+                    # Check if 2D scanning is enabled (Y sample size > 0)
+                    if self.ui.tamanioMuestraY.value() > 0:
+                        takeSamples2D(conn,
+                                    self.ui.offset.value(),
+                                    self.ui.stepSpeed.value(),
+                                    self.ui.tamanioMuestra.value(),
+                                    self.ui.sizeStep.value(),
+                                    self.ui.tamanioHusillo.value(),
+                                    self.ui.platform.value(),
+                                    self.ui.tamanioMuestraY.value(),
+                                    self.ui.sizeStepY.value(),
+                                    coreName)
+                    else:
+                        # Fall back to 1D scanning (X axis only)
+                        takeSamples(conn,
+                                    self.ui.offset.value(),
+                                    self.ui.stepSpeed.value(),
+                                    self.ui.tamanioMuestra.value(),
+                                    self.ui.sizeStep.value(),
+                                    self.ui.tamanioHusillo.value(),
+                                    self.ui.platform.value(),
+                                    ##
+                                    coreName)
 
                     reply2 = qtw.QMessageBox.information(
                         self, "Task finished", "Image shooting finished", qtw.QMessageBox.Ok)
