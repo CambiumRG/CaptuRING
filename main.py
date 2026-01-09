@@ -154,6 +154,9 @@ class WindInterfaz(qtw.QWidget):
 
                     reply2 = qtw.QMessageBox.information(
                         self, "Task finished", "Image shooting finished", qtw.QMessageBox.Ok)
+                    
+                    # Disable the capture button after finishing
+                    self.ui.crearMuestra.setEnabled(False)
 
                 else:
                     reply3 = qtw.QMessageBox.critical(
