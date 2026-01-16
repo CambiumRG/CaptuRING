@@ -182,10 +182,10 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
     xMax = math.ceil(xmax)
     sizeStep = math.ceil(sizeStep)
 
-
-    for i in range(xMin, xMax, sizeStep):
+    for idx, i in enumerate(range(xMin, xMax, sizeStep), start = 1):
+        
         textoMovimiento = "G0 X" + str(i) + " F" + str(speedStep) + "\r"
-        nombreImagen = nameCore + "_" + str(i) + "mm_" + ".jpg"
+        nombreImagen = nameCore + "_" + f"{idx:02}" + "." + "%C"
         path = "Outputs/" + nameCore + "/" + nombreImagen  # Nuevo "Outputs/"
         tiempoSleepPaso = 60 * float(sizeStep) / float(speedStep)
         writeUntilTextArduino(conn, textoMovimiento, "ok")
@@ -195,7 +195,6 @@ def takeSamples(conn, offset, speedStep, sampleSize, sizeStep, spindle, platform
                        path], stdout=subprocess.PIPE, universal_newlines=True)
         print("Foto realizada en x = " + str(i) +
               " con nombre " + str(nombreImagen))
-    print("Shooting Process Finished")
 
     subprocess.call(["gio", "mount", "-s", "gphoto2"])
 
